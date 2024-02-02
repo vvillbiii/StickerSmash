@@ -36,7 +36,7 @@ export default function App() {
           theme="primary"
           onPress={pickImageaAsync}
         />
-        <Button label={"use this photo"} />
+        <Button label={"Use this photo"} />
       </View>
       <StatusBar style="auto" />
     </View>
