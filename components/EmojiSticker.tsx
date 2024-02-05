@@ -5,6 +5,7 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
+import React from "react";
 
 export default function EmojiSticker({ imageSize, stickerSource }) {
   const scaleImage = useSharedValue(imageSize);

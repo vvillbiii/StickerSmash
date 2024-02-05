@@ -1,7 +1,14 @@
-import { StyleSheet, View, Pressable, Text } from "react-native";
+import { StyleSheet, View, Pressable, Text, GestureResponderEvent } from "react-native";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import React from "react";
 
-export default function Button({ label, theme, onPress }) {
+interface ButtonProps {
+  label: string;
+  theme?: string;
+  onPress: (event: GestureResponderEvent) => void;
+}
+
+export default function Button({ label, theme, onPress }: ButtonProps) {
   if (theme === "primary") {
     return (
       <View

@@ -14,15 +14,16 @@ import CircleButton from "./components/CircleButton";
 import EmojiPicker from "./components/EmojiPicker";
 import EmojiList from "./components/EmojiList";
 import EmojiSticker from "./components/EmojiSticker";
+import React from "react";
 
 const Placeholderimage = require("./assets/images/background-image.png");
 
 export default function App() {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [showAppOptions, setShowAppOptions] = useState(true);
+  const [selectedImage, setSelectedImage] = useState<null | string>(null);
+  const [showAppOptions, setShowAppOptions] = useState(false);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [pickedEmoji, setPickedEmoji] = useState(null);
-  const imageRef = useRef();
+  const imageRef = useRef<View>(null);
 
   const [status, requestPermission] = MediaLibrary.usePermissions();
 
