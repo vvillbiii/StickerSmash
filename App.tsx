@@ -20,8 +20,8 @@ const Placeholderimage = require("./assets/images/background-image.png");
 
 export default function App() {
   const [selectedImage, setSelectedImage] = useState<null | string>(null);
-  const [showAppOptions, setShowAppOptions] = useState(false);
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [showAppOptions, setShowAppOptions] = useState<boolean>(false);
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
   const [pickedEmoji, setPickedEmoji] = useState(null);
   const imageRef = useRef<View>(null);
 

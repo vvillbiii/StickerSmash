@@ -1,9 +1,18 @@
-import { View, Pressable, StyleSheet } from "react-native";
+import {
+  View,
+  Pressable,
+  StyleSheet,
+  GestureResponderEvent,
+} from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
 import React from "react";
 
-const CircleButton = ({ onPress }) => {
+interface CircleButtonProps {
+  onPress: (event: GestureResponderEvent) => void;
+}
+
+const CircleButton = ({ onPress }: CircleButtonProps) => {
   return (
     <View style={styles.circleButtonContainer}>
       <Pressable style={styles.circleButton} onPress={onPress}>

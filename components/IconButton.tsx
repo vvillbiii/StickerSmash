@@ -1,8 +1,19 @@
-import { Pressable, StyleSheet, Text } from "react-native";
+import {
+  GestureResponderEvent,
+  Pressable,
+  StyleSheet,
+  Text,
+} from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import React from "react";
 
-const IconButton = ({ icon, label, onPress }) => {
+interface IconButtonProps {
+  icon: "refresh" | "save-alt";
+  label: string;
+  onPress: (event: GestureResponderEvent) => void;
+}
+
+const IconButton = ({ icon, label, onPress }: IconButtonProps) => {
   return (
     <Pressable style={styles.iconButton} onPress={onPress}>
       <MaterialIcons name={icon} size={24} color="#fff" />
